@@ -13,6 +13,10 @@ class Tennis {
             return 'winner player2';
         }
 
+        if (player1Points === 3 && player2Points === 3) {
+            return 'deuce';
+        }
+
         const points = {
             0: 'love',
             1: 'fifteen',
