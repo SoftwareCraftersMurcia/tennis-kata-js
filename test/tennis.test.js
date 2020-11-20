@@ -1,17 +1,14 @@
 const Tennis = require('../src/tennis');
 
 describe('Tennis', () => {
-  it('should be love-love for 0 0', () => {
+  it.each`
+  player1Score | player2Score | expectedScore
+   ${0}        | ${0}         | ${'love-love'}
+   ${1}        | ${0}         | ${'fifteen-love'}
+  `('should be $expectedScore for $player1Score $player2Score', ({player1Score, player2Score, expectedScore}) => {
 
     const tennis = new Tennis();
 
-    expect(tennis.score(0,0)).toBe('love-love');
-  });
-
-  it('should be fifteen-love for 1 0', () => {
-
-    const tennis = new Tennis();
-
-    expect(tennis.score(1,0)).toBe('fifteen-love');
+    expect(tennis.score(player1Score,player2Score)).toBe(expectedScore);
   });
 });
