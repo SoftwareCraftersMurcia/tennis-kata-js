@@ -1,6 +1,6 @@
 class Tennis {
     score(player1Points, player2Points) {
-        const points = ['fifteen', 'thirty', 'forty'];
+        const points = ['fifteen', 'thirty', 'forty', 'love'];
         if (player1Points === 1) {
             return points[0] + '-love';
         }
@@ -10,7 +10,7 @@ class Tennis {
         if (player1Points === 3) {
             return points[2] + '-love';
         }
-        return 'love-love';
+        return points[3] + '-love';
     }
 }
 
