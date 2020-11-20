@@ -33,6 +33,7 @@ describe('Tennis', () => {
       it.each`
   player1Score | player2Score | expectedScore
    ${3}        | ${3}         | ${'deuce'}
+   ${4}        | ${4}         | ${'deuce'}
   `('should be $expectedScore for $player1Score $player2Score', ({player1Score, player2Score, expectedScore}) => {
           const tennis = new Tennis();
 
