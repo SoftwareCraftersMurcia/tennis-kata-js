@@ -1,13 +1,9 @@
 class Tennis {
     score(player1Points, player2Points) {
-        if (this.isAdvantage(player1Points, player2Points)
-        ) {
-            if (player1Points - player2Points === 1) {
-                return 'advantage player1';
-            }
-            if (player2Points - player1Points === 1) {
-                return 'advantage player2';
-            }
+        if (this.isAdvantage(player1Points, player2Points)) {
+            return player1Points > player2Points
+                ? 'advantage player1'
+                : 'advantage player2';
         }
 
         if (player1Points === 4) {
