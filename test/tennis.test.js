@@ -11,10 +11,20 @@ describe('Tennis', () => {
    ${0}        | ${2}         | ${'love-thirty'}
    ${0}        | ${3}         | ${'love-forty'}
   `('should be $expectedScore for $player1Score $player2Score', ({player1Score, player2Score, expectedScore}) => {
-
     const tennis = new Tennis();
 
     expect(tennis.score(player1Score,player2Score)).toBe(expectedScore);
+  });
+
+  describe('advantage score', () => {
+      it.each`
+  player1Score | player2Score | expectedScore
+   ${4}        | ${3}         | ${'advantage player1'}
+  `('should be $expectedScore for $player1Score $player2Score', ({player1Score, player2Score, expectedScore}) => {
+          const tennis = new Tennis();
+
+          expect(tennis.score(player1Score,player2Score)).toBe(expectedScore);
+      });
   });
 
   describe('winning score', () => {
@@ -23,10 +33,9 @@ describe('Tennis', () => {
    ${4}        | ${0}         | ${'winner player1'}
    ${0}        | ${4}         | ${'winner player2'}
   `('should be $expectedScore for $player1Score $player2Score', ({player1Score, player2Score, expectedScore}) => {
-
           const tennis = new Tennis();
 
           expect(tennis.score(player1Score,player2Score)).toBe(expectedScore);
       });
-  })
+  });
 });
