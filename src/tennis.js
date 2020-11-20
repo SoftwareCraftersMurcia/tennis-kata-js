@@ -6,7 +6,7 @@ class Tennis {
             2: 'thirty',
             3: 'forty',
         };
-        return points[player1Points] + '-' + points[player2Points];
+        return `${points[player1Points]}-${points[player2Points]}`;
     }
 }
 
