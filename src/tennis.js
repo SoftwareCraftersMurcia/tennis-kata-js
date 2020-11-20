@@ -6,7 +6,7 @@ class Tennis {
                 : 'advantage player2';
         }
 
-        if (player1Points >= 4) {
+        if (player1Points >= 4 && player1Points > player2Points) {
             return 'winner player1';
         }
         if (player2Points >= 4) {
