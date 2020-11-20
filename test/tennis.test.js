@@ -1,10 +1,17 @@
 const Tennis = require('../src/tennis');
 
 describe('Tennis', () => {
-  it('change_this_name', () => {
+  it('should be love-love for 0 0', () => {
 
-    new Tennis();
+    const tennis = new Tennis();
 
-    expect(true).toBe(true);
+    expect(tennis.score(0,0)).toBe('love-love');
+  });
+
+  it('should be fifteen-love for 1 0', () => {
+
+    const tennis = new Tennis();
+
+    expect(tennis.score(1,0)).toBe('fifteen-love');
   });
 });
