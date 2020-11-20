@@ -21,6 +21,7 @@ describe('Tennis', () => {
   player1Score | player2Score | expectedScore
    ${4}        | ${3}         | ${'advantage player1'}
    ${5}        | ${4}         | ${'advantage player1'}
+   ${3}        | ${4}         | ${'advantage player2'}
   `('should be $expectedScore for $player1Score $player2Score', ({player1Score, player2Score, expectedScore}) => {
           const tennis = new Tennis();
 
