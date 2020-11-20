@@ -13,7 +13,7 @@ class Tennis {
             return 'winner player2';
         }
 
-        if (player1Points>=3 && player1Points === player2Points) {
+        if (this.isDeuce(player1Points, player2Points)) {
             return 'deuce';
         }
 
@@ -24,6 +24,10 @@ class Tennis {
             3: 'forty',
         };
         return `${points[player1Points]}-${points[player2Points]}`;
+    }
+
+    isDeuce(player1Points, player2Points) {
+        return player1Points >= 3 && player1Points === player2Points;
     }
 
     isAdvantage(player1Points, player2Points) {
