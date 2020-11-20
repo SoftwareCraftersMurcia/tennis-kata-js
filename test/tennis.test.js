@@ -10,6 +10,7 @@ describe('Tennis', () => {
    ${0}        | ${1}         | ${'love-fifteen'}
    ${0}        | ${2}         | ${'love-thirty'}
    ${0}        | ${3}         | ${'love-forty'}
+   ${2}        | ${2}         | ${'thirty-thirty'}
   `('should be $expectedScore for $player1Score $player2Score', ({player1Score, player2Score, expectedScore}) => {
     const tennis = new Tennis();
 
@@ -29,7 +30,7 @@ describe('Tennis', () => {
       });
   });
 
-  describe('tie score', () => {
+  describe('deuce score', () => {
       it.each`
   player1Score | player2Score | expectedScore
    ${3}        | ${3}         | ${'deuce'}
