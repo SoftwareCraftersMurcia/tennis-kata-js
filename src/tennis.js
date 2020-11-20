@@ -1,6 +1,9 @@
 class Tennis {
     score(player1Points, player2Points) {
-        if (player1Points === 4 && player2Points === 3) {
+        if (
+            player1Points === 4 && player2Points === 3 ||
+            player1Points === 5 && player2Points === 4
+        ) {
             return 'advantage player1'
         }
         if (player1Points === 4) {
