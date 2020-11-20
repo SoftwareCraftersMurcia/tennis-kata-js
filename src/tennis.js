@@ -13,10 +13,7 @@ class Tennis {
             return 'winner player2';
         }
 
-        if (
-            player1Points === 3 && player2Points === 3 ||
-            player1Points === 4 && player2Points === 4
-        ) {
+        if (player1Points>=3 && player1Points === player2Points) {
             return 'deuce';
         }
 
