@@ -1,7 +1,10 @@
 class Tennis {
     score(player1Points, player2Points) {
-        if (player1Points === 4){
+        if (player1Points === 4) {
             return 'winner player1';
+        }
+        if (player2Points === 4) {
+            return 'winner player2';
         }
         const points = {
             0: 'love',
