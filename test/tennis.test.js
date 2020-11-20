@@ -16,4 +16,15 @@ describe('Tennis', () => {
 
     expect(tennis.score(player1Score,player2Score)).toBe(expectedScore);
   });
+  describe('winning score', () => {
+      it.each`
+  player1Score | player2Score | expectedScore
+   ${4}        | ${0}         | ${'winner player1'}
+  `('should be $expectedScore for $player1Score $player2Score', ({player1Score, player2Score, expectedScore}) => {
+
+          const tennis = new Tennis();
+
+          expect(tennis.score(player1Score,player2Score)).toBe(expectedScore);
+      });
+  })
 });
