@@ -1,7 +1,9 @@
 class Tennis {
     score(player1Points, player2Points) {
         if (player1Points >= 3 &&
-            player2Points >= 3 ) {
+            player2Points >= 3 &&
+            Math.abs(player1Points - player2Points) === 1
+        ) {
             if (player1Points - player2Points === 1) {
                 return 'advantage player1';
             }
